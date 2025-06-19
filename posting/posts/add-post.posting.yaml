@@ -1,0 +1,19 @@
+name: add post
+description: |-
+  Title   string `json:"title" binding:"required,min=3,max=100"`
+  Content string `json:"content" binding:"required,min=10"`
+  Excerpt string `json:"excerpt"`
+method: POST
+url: http://localhost:8080/api/posts/
+body:
+  content: |-
+    {
+      "title":"Four post",
+      "content":"Text for Four post"
+    }
+  content_type: application/json
+headers:
+- name: content-type
+  value: application/json
+- name: Authorization
+  value: $TOKEN

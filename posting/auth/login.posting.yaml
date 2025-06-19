@@ -1,0 +1,16 @@
+name: login
+description: "type LoginRequest struct {\n\tEmail    string `json:\"email\" binding:\"\
+  required,email\"`\n\tPassword string `json:\"password\" binding:\"required,min=6\"\
+  `\n}"
+method: POST
+url: http://$BASE_URL/auth/login
+body:
+  content: |-
+    {
+      "email":"user1@mail.com",
+      "password":"somepass"
+    }
+  content_type: application/json
+headers:
+- name: content-type
+  value: application/json

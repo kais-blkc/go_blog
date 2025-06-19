@@ -1,0 +1,18 @@
+name: register
+description: "type RegisterRequest struct {\n\tUsername string `json:\"username\"\
+  \ binding:\"required,min=3,max=20\"`\n\tEmail    string `json:\"email\" binding:\"\
+  required,email\"`\n\tPassword string `json:\"password\" binding:\"required,min=6\"\
+  `\n}"
+method: POST
+url: http://$BASE_URL/auth/register
+body:
+  content: |-
+    {
+      "username":"user_1",
+      "email":"user1@mail.com",
+      "password":"somepass"
+    }
+  content_type: application/json
+headers:
+- name: content-type
+  value: application/json
