@@ -39,7 +39,7 @@ These instructions will get you a copy of the project up and running on your loc
       * Run migrations (if any are provided – *you'll need to specify migration commands if they exist*).
 4.  **Run the application:**
     ```bash
-    go run main.go
+    go run ./cmd/server/main.go
     ```
 
 -----
